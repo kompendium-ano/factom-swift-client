@@ -374,7 +374,7 @@ public class FactomdService {
     }
     
     //propeties
-    public func multipleFctBalancesService(completion:@escaping APICompletionHandler) {
+    public func propertiesService(completion:@escaping APICompletionHandler) {
         self.params["method"] = "properties"
         ApiManager.shared.httpRequest(urlString: factomdUrl, params: params) { (response, error) in
             guard error == nil else {
