@@ -10,7 +10,7 @@ import Foundation
 
 public class DebugService {
     
-    private let debugServiceUrl = "http://192.168.3.109:8088/v2";
+    private let debugServiceUrl = "https://dev.factomd.net/v2";
     public var params = ["jsonrpc": "2.0", "id": 0] as [String : Any]
     public init() {
         

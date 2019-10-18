@@ -11,7 +11,7 @@ import Foundation
 public class FactomdService {
     
     public var params = ["jsonrpc": "2.0", "id": 0] as [String : Any]
-    private let factomdUrl = "http://192.168.3.109:8088/v2";
+    private let factomdUrl = "https://dev.factomd.net/v2";
     
     public init() {}
     

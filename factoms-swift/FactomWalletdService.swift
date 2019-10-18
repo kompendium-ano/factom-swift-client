@@ -11,7 +11,7 @@ import Foundation
 public class FactomWalletdService {
     
     public var params = ["jsonrpc": "2.0", "id": 0] as [String : Any]
-    private let factomWalletdUrl = "http://192.168.3.109:8089/v2"
+    private let factomWalletdUrl = "https://dev.factomd.net/v2"
     
     public init() {
         
