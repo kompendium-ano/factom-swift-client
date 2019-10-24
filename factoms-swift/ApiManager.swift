@@ -12,7 +12,7 @@ import Alamofire
 public typealias APICompletionHandler = ((_ response:JSONObject?, _ error:Error?)->Void)
 public typealias JSONObject           = [String:Any]
 
-//Base class for requesting the API's from the server
+/// Base class for requesting the API's from the server
 public class ApiManager {
     
     //MARK: - Properties
@@ -20,10 +20,12 @@ public class ApiManager {
     
     //MARK: - Functions
     
-    //call the below function for making request to the server
-    //It is an asynchronous function
-    //It gives a callback of type APICompletionHandler after it get response
-    
+    /// This function is for making request to the server
+    /// It is an asynchronous function
+    /// It gives a callback of type APICompletionHandler after it get response
+    /// - Parameter urlString: it takes a string of url from which you want to get response
+    /// - Parameter params: it takes parameters of type Dictionary
+    /// - Parameter completion: it gives response if successfull and error if request fails
     func httpRequest(urlString:String, params:JSONObject?, completion:@escaping APICompletionHandler) {
         let urlEncoding = JSONEncoding.prettyPrinted
         let headers = ["content-type":"text/plain"]
@@ -44,7 +46,7 @@ public class ApiManager {
         }
     }
     
-    //Call the below function to check the internet connection
+    /// Call the below function to check the internet connection
     @discardableResult
     open func isConnectedToInternet() -> Bool {
         return NetworkReachabilityManager()?.isReachable ?? false
