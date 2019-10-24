@@ -9,7 +9,8 @@
 import Foundation
 
 /// FactomWalletdService  serves the wallet API
-/// Create an instance of this class to use all the methods of the Wallet API
+///
+/// Import factoms-api and alamofire before using this class other wise it wont work
 public class FactomWalletdService {
     
     public var params = ["jsonrpc": "2.0", "id": 0] as [String : Any]

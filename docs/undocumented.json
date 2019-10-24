@@ -1,0 +1,54 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/Atul/Documents/Aman/AppDevelopment/factoms-swift/factoms-swift/ApiManager.swift",
+      "line": 12,
+      "symbol": "APICompletionHandler",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Atul/Documents/Aman/AppDevelopment/factoms-swift/factoms-swift/ApiManager.swift",
+      "line": 13,
+      "symbol": "JSONObject",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Atul/Documents/Aman/AppDevelopment/factoms-swift/factoms-swift/ApiManager.swift",
+      "line": 19,
+      "symbol": "ApiManager.shared",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Atul/Documents/Aman/AppDevelopment/factoms-swift/factoms-swift/DebugService.swift",
+      "line": 17,
+      "symbol": "DebugService.params",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Atul/Documents/Aman/AppDevelopment/factoms-swift/factoms-swift/DebugService.swift",
+      "line": 18,
+      "symbol": "DebugService.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Atul/Documents/Aman/AppDevelopment/factoms-swift/factoms-swift/FactomWalletdService.swift",
+      "line": 16,
+      "symbol": "FactomWalletdService.params",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Atul/Documents/Aman/AppDevelopment/factoms-swift/factoms-swift/FactomdService.swift",
+      "line": 16,
+      "symbol": "FactomdService.params",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/Atul/Documents/Aman/AppDevelopment/factoms-swift"
+}

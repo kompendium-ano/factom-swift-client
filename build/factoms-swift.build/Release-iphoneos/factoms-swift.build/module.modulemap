@@ -1,0 +1,11 @@
+framework module factoms_swift {
+  umbrella header "factoms_swift.h"
+
+  export *
+  module * { export * }
+}
+
+module factoms_swift.Swift {
+    header "factoms_swift-Swift.h"
+    requires objc
+}

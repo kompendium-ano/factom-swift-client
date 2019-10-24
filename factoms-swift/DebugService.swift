@@ -8,6 +8,9 @@
 
 import Foundation
 
+/// These API calls are primarily for debugging purposes.
+///
+/// Import factoms-api and alamofire before using this class other wise it wont work
 public class DebugService {
     
     private let debugServiceUrl = "https://dev.factomd.net/v2";
@@ -16,8 +19,10 @@ public class DebugService {
         
     }
     
-    // holding-queue
-    public func holdingQueueService(completion:@escaping APICompletionHandler) {
+    
+    /// Shows current holding messages in the queue.‌
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func holdingQueue(completion:@escaping APICompletionHandler) {
         
         self.params["method"] = "holding-queue"
         
@@ -30,8 +35,10 @@ public class DebugService {
         }
     }
     
-    //network-info
-    public func networkingInfoService(completion:@escaping APICompletionHandler) {
+    
+    /// Get information on the current network factomd is connected to (TEST, MAIN, etc).
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func networkingInfo(completion:@escaping APICompletionHandler) {
         
         self.params["method"] = "networking-info"
         
@@ -44,9 +51,10 @@ public class DebugService {
         }
     }
     
-    // predictive-fer
     
-    public func predictiveFerService(completion:@escaping APICompletionHandler) {
+    /// Get the predicted future entry credit rate.‌
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func predictiveFer(completion:@escaping APICompletionHandler) {
         
         self.params["method"] = "predictive-fer"
         
@@ -59,8 +67,10 @@ public class DebugService {
         }
     }
     
-    // audit-servers
-    public func auditServersService(completion:@escaping APICompletionHandler) {
+    
+    /// Get a list of the current network audit servers along with their information.‌
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func auditServers(completion:@escaping APICompletionHandler) {
         
         self.params["method"] = "audit-servers"
         
@@ -73,8 +83,10 @@ public class DebugService {
         }
     }
     
-    //federated-servers
-    public func federatedServersService(completion:@escaping APICompletionHandler) {
+    
+    /// Get a list of the current network federated servers along with their information.
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func federatedServers(completion:@escaping APICompletionHandler) {
         
         self.params["method"] = "federated-servers"
         
@@ -87,7 +99,9 @@ public class DebugService {
         }
     }
     
-    // configuration
+    
+    /// Get the current configuration state from factomd.‌
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
     public func configurationService(completion:@escaping APICompletionHandler) {
         
         self.params["method"] = "configuration"
@@ -101,8 +115,10 @@ public class DebugService {
         }
     }
     
-    //process-list
-    public func processListService(completion:@escaping APICompletionHandler) {
+    
+    /// Get the process list known to the current factomd instance.‌
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func processList(completion:@escaping APICompletionHandler) {
         
         self.params["method"] = "process-list"
         
@@ -115,8 +131,10 @@ public class DebugService {
         }
     }
     
-    //authorities
-    public func authoritesService(completion:@escaping APICompletionHandler) {
+    
+    /// List of authority servers in the management chain.
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func authorites(completion:@escaping APICompletionHandler) {
         
         self.params["method"] = "authorites"
         
@@ -129,8 +147,10 @@ public class DebugService {
         }
     }
     
-    //reload-configuration
-    public func reloadConfigurationService(completion:@escaping APICompletionHandler) {
+    
+    /// Causes factomd to re-read the configuration from the config file.
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func reloadConfiguration(completion:@escaping APICompletionHandler) {
         
         self.params["method"] = "reload-configuration"
         
@@ -143,8 +163,10 @@ public class DebugService {
         }
     }
     
-    //drop-rate
-    public func dropRateService(completion:@escaping APICompletionHandler) {
+    
+    /// Get the current package drop rate for network testing.‌
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func dropRate(completion:@escaping APICompletionHandler) {
         
         self.params["method"] = "drop-rate"
         
@@ -157,8 +179,10 @@ public class DebugService {
         }
     }
     
-    // set-drop-rate
-    public func setDropRateService(completion:@escaping APICompletionHandler) {
+    
+    /// Change the network drop rate for testing.‌
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func setDropRate(completion:@escaping APICompletionHandler) {
         
         self.params["method"] = "set-drop-rate"
         
@@ -171,8 +195,10 @@ public class DebugService {
         }
     }
     
-    //delay
-    public func delayService(completion:@escaping APICompletionHandler) {
+    
+    /// Get the current msg delay time for network testing
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func delay(completion:@escaping APICompletionHandler) {
         
         self.params["method"] = "delay"
         
@@ -185,8 +211,9 @@ public class DebugService {
         }
     }
     
-    //set-delay
-    public func setDelayService(completion:@escaping APICompletionHandler) {
+    /// Set the current msg delay time for network testing.‌
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func setDelay(completion:@escaping APICompletionHandler) {
         
         self.params["method"] = "set-delay"
         
@@ -199,8 +226,24 @@ public class DebugService {
         }
     }
     
-    //messages
-    public func messagesService(completion:@escaping APICompletionHandler) {
+    /// Get the nodes summary string.‌
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func summary(completion:@escaping APICompletionHandler) {
+        
+        self.params["method"] = "set-delay"
+        
+        ApiManager.shared.httpRequest(urlString: debugServiceUrl, params: params) { (response, error) in
+            guard error == nil else {
+                completion(nil, error!)
+                return
+            }
+            completion(response!, nil)
+        }
+    }
+    
+    /// Get a list of messages from the message journal
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func messages(completion:@escaping APICompletionHandler) {
         
         self.params["method"] = "messages"
         

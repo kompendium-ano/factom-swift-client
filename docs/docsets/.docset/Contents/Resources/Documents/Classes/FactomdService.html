@@ -1,0 +1,2147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FactomdService Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/FactomdService" class="dashAnchor"></a>
+    <a title="FactomdService Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (92% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        FactomdService Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ApiManager.html">ApiManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DebugService.html">DebugService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FactomWalletdService.html">FactomWalletdService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FactomdService.html">FactomdService</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:13factoms_swift10JSONObjecta">JSONObject</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>FactomdService</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">FactomdService</span></code></pre>
+
+                </div>
+              </div>
+            <p>The API is designed for outside application to process transactions and interact with the Factom federated servers.</p>
+
+<p>Import factoms-api and alamofire before using this class other wise it wont work</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC6paramsSDySSypGvp"></a>
+                    <a name="//apple_ref/swift/Property/params" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC6paramsSDySSypGvp">params</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">params</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceCACycfc"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceCACycfc">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>initialize</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC14ablockByHeight6height10completionySi_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/ablockByHeight(height:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC14ablockByHeight6height10completionySi_ySDySSypGSg_s5Error_pSgtctF">ablockByHeight(height:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve administrative blocks for any given height.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ablockByHeight</span><span class="p">(</span><span class="nv">height</span><span class="p">:</span><span class="kt">Int</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>height</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass height of type int</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC3ack4hash7chainId15fullTransaction10completionySS_S2SSgySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/ack(hash:chainId:fullTransaction:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC3ack4hash7chainId15fullTransaction10completionySS_S2SSgySDySSypGSg_s5Error_pSgtctF">ack(hash:chainId:fullTransaction:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This Method  is used to find the status of a transaction, whether it be a factoid, reveal entry, or commit entry.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ack</span><span class="p">(</span><span class="nv">hash</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="nv">chainId</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="nv">fullTransaction</span><span class="p">:</span><span class="kt">String</span><span class="p">?</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hash</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass a string</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>chainId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass chainId</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fullTransaction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass a type of string , this can be optional</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC10adminBlock5keymr10completionySS_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/adminBlock(keymr:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC10adminBlock5keymr10completionySS_ySDySSypGSg_s5Error_pSgtctF">adminBlock(keymr:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve a specified admin block given its merkle root key.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">adminBlock</span><span class="p">(</span><span class="nv">keymr</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keymr</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass a keymr of type string</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC9chainHead0E2Id10completionySS_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/chainHead(chainId:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC9chainHead0E2Id10completionySS_ySDySSypGSg_s5Error_pSgtctF">chainHead(chainId:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return the keymr of the head of the chain for a chain ID (the unique hash created when the chain was created).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">chainHead</span><span class="p">(</span><span class="nv">chainId</span><span class="p">:</span><span class="kt">String</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>chainId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass chainId as a String</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC11commitChain7message10completionySS_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/commitChain(message:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC11commitChain7message10completionySS_ySDySSypGSg_s5Error_pSgtctF">commitChain(message:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Send a Chain Commit Message to factomd to create a new Chain.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">commitChain</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span><span class="kt">String</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass a message of type String</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC11commitEntry7message10completionySS_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/commitEntry(message:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC11commitEntry7message10completionySS_ySDySSypGSg_s5Error_pSgtctF">commitEntry(message:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Send an Entry Commit Message to factom to create a new Entry.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">commitEntry</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span><span class="kt">String</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass a message of type string</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC11currentTime10completionyySDySSypGSg_s5Error_pSgtc_tF"></a>
+                    <a name="//apple_ref/swift/Method/currentTime(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC11currentTime10completionyySDySSypGSg_s5Error_pSgtc_tF">currentTime(completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The current-minute API call returns:
+leaderheight returns the current block height.
+directoryblockheight returns the last saved height.
+minute returns the current minute number for the open entry block.
+currentblockstarttime returns the start time for the current block.
+currentminutestarttime returns the start time for the current minute.
+currenttime returns the current nodes understanding of current time.
+directoryblockinseconds returns the number of seconds per block.
+stalldetected returns if factomd thinks it has stalled.
+faulttimeout returns the number of seconds before leader node is faulted for failing to provide a necessary message.
+roundtimeout returns the number of seconds between rounds of an election during a fault.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">currentTime</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC14dBlockByHeight6height10completionys5Int64V_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/dBlockByHeight(height:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC14dBlockByHeight6height10completionys5Int64V_ySDySSypGSg_s5Error_pSgtctF">dBlockByHeight(height:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieves a directory block given only its height.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">dBlockByHeight</span><span class="p">(</span><span class="nv">height</span><span class="p">:</span><span class="kt">Int64</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>height</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass a height of type Int64</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC14directoryBlock5keymr10completionySS_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/directoryBlock(keymr:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC14directoryBlock5keymr10completionySS_ySDySSypGSg_s5Error_pSgtctF">directoryBlock(keymr:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Every directory block has a KeyMR (Key Merkle Root), which can be used to retrieve it.
+The response will contain information that can be used to navigate through all transactions (entry and factoid) within that block.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">directoryBlock</span><span class="p">(</span><span class="nv">keymr</span><span class="p">:</span><span class="kt">String</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keymr</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass a keymr of type String</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC18directoryBlockHead10completionyySDySSypGSg_s5Error_pSgtc_tF"></a>
+                    <a name="//apple_ref/swift/Method/directoryBlockHead(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC18directoryBlockHead10completionyySDySSypGSg_s5Error_pSgtc_tF">directoryBlockHead(completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The directory block head is the last known directory block by factom, or in other words, the most recently recorded block.
+This can be used to grab the latest block and the information required to traverse the entire blockchain.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">directoryBlockHead</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC15ecBlockByHeight6height10completionys5Int64V_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/ecBlockByHeight(height:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC15ecBlockByHeight6height10completionys5Int64V_ySDySSypGSg_s5Error_pSgtctF">ecBlockByHeight(height:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve the entry credit block for any given height. These blocks contain entry credit transaction information.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ecBlockByHeight</span><span class="p">(</span><span class="nv">height</span><span class="p">:</span><span class="kt">Int64</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>height</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass height of type Int64</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC5entry4hash10completionySS_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/entry(hash:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC5entry4hash10completionySS_ySDySSypGSg_s5Error_pSgtctF">entry(hash:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get an Entry from factomd specified by the Entry Hash.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">entry</span><span class="p">(</span><span class="nv">hash</span><span class="p">:</span><span class="kt">String</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hash</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass a string</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC8entryAck4txid10completionySS_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/entryAck(txid:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC8entryAck4txid10completionySS_ySDySSypGSg_s5Error_pSgtctF">entryAck(txid:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Entry Acknowledgements will give the current status of a transaction.
+ “DBlockConfirmed” is the highest level of confirmation you can obtain.
+  This means the entry has made it into Factom.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">entryAck</span><span class="p">(</span><span class="nv">txid</span><span class="p">:</span><span class="kt">String</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>txid</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>transactionId of type String</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC10entryBlock5keymr10completionySS_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/entryBlock(keymr:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC10entryBlock5keymr10completionySS_ySDySSypGSg_s5Error_pSgtctF">entryBlock(keymr:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve a specified entry block given its merkle root key. The entry block contains 0 to many entries</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">entryBlock</span><span class="p">(</span><span class="nv">keymr</span><span class="p">:</span><span class="kt">String</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keymr</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass a keymr of type String</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC18entryCreditBalance7address10completionySS_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/entryCreditBalance(address:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC18entryCreditBalance7address10completionySS_ySDySSypGSg_s5Error_pSgtctF">entryCreditBalance(address:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return its current balance for a specific entry credit address.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">entryCreditBalance</span><span class="p">(</span><span class="nv">address</span><span class="p">:</span><span class="kt">String</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>address</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass an address of type string</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC16ebtryCreditBlock5keymr10completionySS_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/ebtryCreditBlock(keymr:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC16ebtryCreditBlock5keymr10completionySS_ySDySSypGSg_s5Error_pSgtctF">ebtryCreditBlock(keymr:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve a specified entrycredit block given its merkle root key. The numbers are minute markers.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ebtryCreditBlock</span><span class="p">(</span><span class="nv">keymr</span><span class="p">:</span><span class="kt">String</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keymr</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass a keymr of type string</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC15entryCreditRate10completionyySDySSypGSg_s5Error_pSgtc_tF"></a>
+                    <a name="//apple_ref/swift/Method/entryCreditRate(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC15entryCreditRate10completionyySDySSypGSg_s5Error_pSgtc_tF">entryCreditRate(completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the number of Factoshis (Factoids *10^-8) that purchase a single Entry Credit.
+ The minimum factoid fees are also determined by this rate, along with how complex the factoid transaction is.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">entryCreditRate</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC10factoidAck4txid10completionySS_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/factoidAck(txid:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC10factoidAck4txid10completionySS_ySDySSypGSg_s5Error_pSgtctF">factoidAck(txid:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Factoid Acknowledgements will give the current status of a transaction.
+ “DBlockConfirmed” is the highest level of confirmation you can obtain.
+ This means the transaction has completed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">factoidAck</span><span class="p">(</span><span class="nv">txid</span><span class="p">:</span><span class="kt">String</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>txid</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>transactionId of type string</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC14factoidBalance7address10completionySS_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/factoidBalance(address:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC14factoidBalance7address10completionySS_ySDySSypGSg_s5Error_pSgtctF">factoidBalance(address:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method returns the number of Factoshis (Factoids *10^-8) that are currently available at the address specified.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">factoidBalance</span><span class="p">(</span><span class="nv">address</span><span class="p">:</span><span class="kt">String</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>address</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass an address of type string</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC12factoidBlock5keymr10completionySS_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/factoidBlock(keymr:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC12factoidBlock5keymr10completionySS_ySDySSypGSg_s5Error_pSgtctF">factoidBlock(keymr:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve a specified factoid block given its merkle root key.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">factoidBlock</span><span class="p">(</span><span class="nv">keymr</span><span class="p">:</span><span class="kt">String</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keymr</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass a keymr description</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC13factoidSubmit11transaction10completionySS_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/factoidSubmit(transaction:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC13factoidSubmit11transaction10completionySS_ySDySSypGSg_s5Error_pSgtctF">factoidSubmit(transaction:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve a specified factoid block given its merkle root key.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">factoidSubmit</span><span class="p">(</span><span class="nv">transaction</span><span class="p">:</span><span class="kt">String</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transaction</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>&lt;#transaction description#&gt;</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC14fBlockByHeight6height10completionys5Int64V_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/fBlockByHeight(height:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC14fBlockByHeight6height10completionys5Int64V_ySDySSypGSg_s5Error_pSgtctF">fBlockByHeight(height:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve the factoid block for any given height. These blocks contain factoid transaction information.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">fBlockByHeight</span><span class="p">(</span><span class="nv">height</span><span class="p">:</span><span class="kt">Int64</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>height</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass an height of type Int64</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC7heights10completionyySDySSypGSg_s5Error_pSgtc_tF"></a>
+                    <a name="//apple_ref/swift/Method/heights(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC7heights10completionyySDySSypGSg_s5Error_pSgtc_tF">heights(completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns various heights that allows you to view the state of the blockchain. The heights returned provide a lot of information regarding the state of factomd, but not all are needed by most applications.
+directoryblockheight : The current directory block height of the local factomd node.
+leaderheight : The current block being worked on by the leaders in the network. This block is not yet complete, but all transactions submitted will go into this block (depending on network conditions, the transaction may be delayed into the next block)
+entryblockheight : The height at which the factomd node has all the entry blocks. Directory blocks are obtained first, entry blocks could be lagging behind the directory block when syncing.
+entryheight : The height at which the local factomd node has all the entries. If you added entries at a block height above this, they will not be able to be retrieved by the local factomd until it syncs further.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">heights</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC18multipleEcBalances9addresses10completionySaySSG_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/multipleEcBalances(addresses:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC18multipleEcBalances9addresses10completionySaySSG_ySDySSypGSg_s5Error_pSgtctF">multipleEcBalances(addresses:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The multiple-ec-balances API is used to query the acknowledged and saved balances for a list of entry credit addresses.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">multipleEcBalances</span><span class="p">(</span><span class="nv">addresses</span><span class="p">:[</span><span class="kt">String</span><span class="p">]</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>addresses</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass an address of type string</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC19multipleFctBalances9addresses10completionySaySSG_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/multipleFctBalances(addresses:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC19multipleFctBalances9addresses10completionySaySSG_ySDySSypGSg_s5Error_pSgtctF">multipleFctBalances(addresses:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The multiple-fct-balances API is used to query the acknowledged and saved balances in factoshis (a factoshi is 10^8 factoids) not factoids(FCT) for a list of FCT addresses.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">multipleFctBalances</span><span class="p">(</span><span class="nv">addresses</span><span class="p">:[</span><span class="kt">String</span><span class="p">]</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>addresses</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass an address of type string</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC14pendingEntries10completionyySDySSypGSg_s5Error_pSgtc_tF"></a>
+                    <a name="//apple_ref/swift/Method/pendingEntries(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC14pendingEntries10completionyySDySSypGSg_s5Error_pSgtc_tF">pendingEntries(completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an array of the entries that have been submitted but have not been recorded into the blockchain.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">pendingEntries</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC19pendingTransactions7address10completionySS_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/pendingTransactions(address:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC19pendingTransactions7address10completionySS_ySDySSypGSg_s5Error_pSgtctF">pendingTransactions(address:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an array of factoid transactions that have not yet been recorded in the blockchain, but are known to the system.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">pendingTransactions</span><span class="p">(</span><span class="nv">address</span><span class="p">:</span><span class="kt">String</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>address</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass an address of type string</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC10properties10completionyySDySSypGSg_s5Error_pSgtc_tF"></a>
+                    <a name="//apple_ref/swift/Method/properties(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC10properties10completionyySDySSypGSg_s5Error_pSgtc_tF">properties(completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve current properties of the Factom system, including the software and the API versions.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">properties</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC7rawData4hash10completionySS_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/rawData(hash:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC7rawData4hash10completionySS_ySDySSypGSg_s5Error_pSgtctF">rawData(hash:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve an entry or transaction in raw format, the data is a hex encoded string.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">rawData</span><span class="p">(</span><span class="nv">hash</span><span class="p">:</span><span class="kt">String</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hash</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass a hash of type string</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC7receipt4hash10completionySS_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/receipt(hash:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC7receipt4hash10completionySS_ySDySSypGSg_s5Error_pSgtctF">receipt(hash:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve a receipt providing cryptographically verifiable proof that information was recorded in the factom blockchain and that this was subsequently anchored in the bitcoin blockchain.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">receipt</span><span class="p">(</span><span class="nv">hash</span><span class="p">:</span><span class="kt">String</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hash</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass a hash of type string</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC11revialChain5entry10completionySS_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/revialChain(entry:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC11revialChain5entry10completionySS_ySDySSypGSg_s5Error_pSgtctF">revialChain(entry:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reveal the First Entry in a Chain to factomd after the Commit to complete the Chain creation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">revialChain</span><span class="p">(</span><span class="nv">entry</span><span class="p">:</span><span class="kt">String</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>entry</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass an entry of type string</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC11revealEntry5entry10completionySS_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/revealEntry(entry:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC11revealEntry5entry10completionySS_ySDySSypGSg_s5Error_pSgtctF">revealEntry(entry:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reveal an Entry to factomd after the Commit to complete the Entry creation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">revealEntry</span><span class="p">(</span><span class="nv">entry</span><span class="p">:</span><span class="kt">String</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>entry</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass an entry of type string</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC27sendRawMessageToCheckCommit7message10completionySS_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/sendRawMessageToCheckCommit(message:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC27sendRawMessageToCheckCommit7message10completionySS_ySDySSypGSg_s5Error_pSgtctF">sendRawMessageToCheckCommit(message:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>sendRawMessageToCheckCommit</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendRawMessageToCheckCommit</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span><span class="kt">String</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass a message of type string</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC32sendRawMessageToCheckRevealChain7message10completionySS_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/sendRawMessageToCheckRevealChain(message:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC32sendRawMessageToCheckRevealChain7message10completionySS_ySDySSypGSg_s5Error_pSgtctF">sendRawMessageToCheckRevealChain(message:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>sendRawMessageToCheckRevealChain</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendRawMessageToCheckRevealChain</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span><span class="kt">String</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass a message of type string</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13factoms_swift14FactomdServiceC11transaction4hash10completionySS_ySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/transaction(hash:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13factoms_swift14FactomdServiceC11transaction4hash10completionySS_ySDySSypGSg_s5Error_pSgtctF">transaction(hash:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve details of a factoid transaction using a transaction’s hash (or corresponding transaction id).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">transaction</span><span class="p">(</span><span class="nv">hash</span><span class="p">:</span><span class="kt">String</span> <span class="p">,</span><span class="nv">completion</span><span class="p">:</span><span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:13factoms_swift20APICompletionHandlera">APICompletionHandler</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hash</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>pass a hash of type string</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>give response of type jsonObject  if successful and error if request falis</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-10-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

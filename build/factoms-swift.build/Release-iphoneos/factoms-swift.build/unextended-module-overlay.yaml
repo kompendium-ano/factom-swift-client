@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/Atul/Documents/Aman/AppDevelopment/factoms-swift/build/Release-iphoneos/factoms_swift.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/Atul/Documents/Aman/AppDevelopment/factoms-swift/build/factoms-swift.build/Release-iphoneos/factoms-swift.build/unextended-module.modulemap",
+    }]
+  }]
+}
