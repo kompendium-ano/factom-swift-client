@@ -21,6 +21,22 @@ public class FactomWalletdService {
         
     }
     
+    /// This method will return an identity’s set of public keys (in order of decreasing priority) that were active at a specific block, or at the most recent height if the "height" parameter is not included.
+    /// - Parameter chainId: pass chainId of type String
+    /// - Parameter height: pass height
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func activeIdentityKeys(chainId:String, height:Double, completion:@escaping APICompletionHandler) {
+        self.params["method"] = "active-identity-keys"
+        self.params["params"] = ["chainId":chainId, "height":height]
+        ApiManager.shared.httpRequest(urlString: factomWalletdUrl, params: params) { (response, error) in
+            guard error == nil else {
+                completion(nil, error!)
+                return
+            }
+            completion(response!, nil)
+        }
+    }
+    
     /// Method is used to add entry credit outputs
     /// - Parameter txName: transaction name of type String
     /// - Parameter address: address of type string
@@ -101,7 +117,7 @@ public class FactomWalletdService {
     /// Retrieve the public and private parts of a Factoid or Entry Credit address stored in the wallet.‌
     /// - Parameter address: address of type String
     /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
-    public func getAddress(address:String ,completion:@escaping APICompletionHandler) {
+    public func address(address:String ,completion:@escaping APICompletionHandler) {
            self.params["method"] = "address"
            self.params["params"] = ["address":address]
            ApiManager.shared.httpRequest(urlString: factomWalletdUrl, params: params) { (response, error) in
@@ -115,7 +131,7 @@ public class FactomWalletdService {
 
     /// ‌Retrieve all of the Factoid and Entry Credit addresses stored in the wallet.‌
     /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
-    public func GetAllAddress(completion:@escaping APICompletionHandler) {
+    public func allAddress(completion:@escaping APICompletionHandler) {
         
         self.params["method"] = "all-addresses"
         
@@ -127,6 +143,21 @@ public class FactomWalletdService {
             completion(response!, nil)
         }
     }
+    
+    /// ‌Returns all of the identity key pairs that are currently stored in the wallet. If the wallet is encrypted, it must be unlocked prior to using this method.
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+       public func allIdentityKeys(completion:@escaping APICompletionHandler) {
+           
+           self.params["method"] = "all-identity-keys"
+           
+           ApiManager.shared.httpRequest(urlString: factomWalletdUrl, params: params) { (response, error) in
+               guard error == nil else {
+                   completion(nil, error!)
+                   return
+               }
+               completion(response!, nil)
+           }
+       }
     
     
     /// This method, compose-chain, will return the appropriate API calls to create a chain in factom. You must first call the commit-chain, then the reveal-chain API calls. To be safe, wait a few seconds after calling commit.‌
@@ -170,6 +201,88 @@ public class FactomWalletdService {
                completion(response!, nil)
            }
        }
+    
+    /// This request allows one identity to state an attribute about another identity and publish that entry to any existing chain. An attribute is a set of generic key:value pairs that can be assigned to an identity and is flexible enough to accommodate many different use-cases. In the example request, an identity is giving itself an attribute describing its current email address, and writing that entry to its own identity chain.
+    /// - Parameter receiverChainId: the Chain ID for the identity being assigned the attribute
+    /// - Parameter destinationChainId: the Chain ID where the attribute entry will be written. Could be any existing chain, dream big.
+    /// - Parameter attributes: the array of attributes that you are assigning to the receiver
+    /// - Parameter signerKey: the public identity key being used to sign the entry. Must be stored in the wallet already and should be a currently valid key for the signer identity.
+    /// - Parameter signerChainId: the Identity Chain of the signing party (who is giving the attribute)
+    /// - Parameter ecpub: pass a string
+    /// - Parameter force: pass a boolean
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func composeIdentityAttribute(receiverChainId:String, destinationChainId:String, attributes:[String:Any], signerKey:String, signerChainId:String, ecpub:String, force:Bool, completion:@escaping APICompletionHandler) {
+        
+        self.params["method"] = "compose-identity-attribute"
+        self.params["params"] = ["receiver-chainid":receiverChainId, "destination-chainid":destinationChainId, "attributes":attributes, "signerkey":signerKey, "signer-chainid":signerChainId, "ecpub":ecpub, "force":force]
+        
+        ApiManager.shared.httpRequest(urlString: factomWalletdUrl, params: params) { (response, error) in
+            guard error == nil else {
+                completion(nil, error!)
+                return
+            }
+            completion(response!, nil)
+        }
+    }
+    
+    
+    /// This method helps you endorse an attribute that has already been registered on the Factom blockchain. To do this, you’ll need to create a structured entry on to the Identity chain. The compose-identity-attribute-endorsement method will return the API calls needed to create that entry. If the wallet is encrypted, it must be unlocked prior to using this command.
+    /// - Parameter destinationChainId: the Chain ID where the attribute entry will be written. Could be any existing chain, dream big.
+    /// - Parameter entryHash: the entry hash of the attribute that will be endorsed
+    /// - Parameter signerKey: the public identity key being used to sign the entry. Must be stored in the wallet already and should be a currently valid key for the signer identity.
+    /// - Parameter signerChainId: the Identity Chain of the signing party (who is endorsing the attribute located at entry-hash)
+    /// - Parameter ecpub: pass a string
+    /// - Parameter force: pass a boolean
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func composeIdentityAttributeEndorsement(destinationChainId:String, entryHash:String, signerKey:String, signerChainId:String, ecpub:String, force:Bool, completion:@escaping APICompletionHandler) {
+        self.params["method"] = "compose-identity-attribute-endorsement"
+        self.params["params"] = ["destination-chainid":destinationChainId, "entry-hash":attributes, "signerkey":signerKey, "signer-chainid":signerChainId, "ecpub":ecpub, "force":force]
+        
+        ApiManager.shared.httpRequest(urlString: factomWalletdUrl, params: params) { (response, error) in
+            guard error == nil else {
+                completion(nil, error!)
+                return
+            }
+            completion(response!, nil)
+        }
+    }
+    
+    /// The compose-identity-chain method will return the appropriate API calls to create an identity chain in factom. The chain will be constructed based on the name and public keys that you send in the request. The response you receive is similar to the compose-chain response.
+    /// - Parameter names: pass an array of names
+    /// - Parameter pubkeys: pass an array of pubkeys
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func composeIdentityChain(names:[String], pubkeys:[String] ,completion:@escaping APICompletionHandler) {
+        self.params["method"] = "compose-identity-chain"
+        self.params["params"] = ["name":names, "pubkeys":pubkeys]
+        ApiManager.shared.httpRequest(urlString: factomWalletdUrl, params: params) { (response, error) in
+            guard error == nil else {
+                completion(nil, error!)
+                return
+            }
+            completion(response!, nil)
+        }
+    }
+    
+    /// Replacing one of an identity’s keys is done by adding a structured entry onto the identity’s chain. This will need to be done if you feel that a key was compromised or has been in use for too long.
+    /// - Parameter chainId: the ChainID of the identity chain in question
+    /// - Parameter oldkey: the public identity key for the level to be replaced
+    /// - Parameter newkey: the public identity key that will be replacing oldkey
+    /// - Parameter signerkey: the public identity key that will sign the entry and authorize the replacement. This key must be stored in the wallet already and must be of the same or higher priority than the oldkey in the context of the given Identity Chain.
+    /// - Parameter ecpub: pass a string
+    /// - Parameter force: pass a boolean
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func composeIdentityKeyReplacement(chainId:String, oldkey:String, newkey:String, signerkey:String, ecpub:String, force:Bool, completion:@escaping APICompletionHandler) {
+        self.params["method"] = "compose-identity-key-replacement"
+        self.params["params"] = ["chainid":chainId, "oldkey":oldkey, "signerkey":signerkey, "newkey":newkey, "ecpub":ecpub, "force":force]
+        
+        ApiManager.shared.httpRequest(urlString: factomWalletdUrl, params: params) { (response, error) in
+            guard error == nil else {
+                completion(nil, error!)
+                return
+            }
+            completion(response!, nil)
+        }
+    }
     
     
     /// Compose transaction marshals the transaction into a hex encoded string.
@@ -221,9 +334,24 @@ public class FactomWalletdService {
     
     /// ‌Create a new Entry Credit Address and store it in the wallet.‌
     /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
-    public func generateFactoid(completion:@escaping APICompletionHandler) {
+    public func generateFactoidAddress(completion:@escaping APICompletionHandler) {
         
         self.params["method"] = "generate-factoid-address"
+        
+        ApiManager.shared.httpRequest(urlString: factomWalletdUrl, params: params) { (response, error) in
+            guard error == nil else {
+                completion(nil, error!)
+                return
+            }
+            completion(response!, nil)
+        }
+    }
+    
+    /// ‌Creates a new identity key and adds it to the wallet.
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func generateIdentityKey(completion:@escaping APICompletionHandler) {
+        
+        self.params["method"] = "generate-identity-key"
         
         ApiManager.shared.httpRequest(urlString: factomWalletdUrl, params: params) { (response, error) in
             guard error == nil else {
@@ -250,6 +378,22 @@ public class FactomWalletdService {
        }
     
     
+    /// Given an identity public key as input, this method will respond with the corresponding public/private key pair from the wallet.
+    /// - Parameter publicKey: pass a public key
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func identityKey(publicKey:String ,completion:@escaping APICompletionHandler) {
+        self.params["method"] = "identity-key"
+        self.params["params"] = ["public":publicKey]
+        ApiManager.shared.httpRequest(urlString: factomWalletdUrl, params: params) { (response, error) in
+            guard error == nil else {
+                completion(nil, error!)
+                return
+            }
+            completion(response!, nil)
+        }
+    }
+    
+    
     /// Import Factoid and/or Entry Credit address secret keys into the wallet.‌
     /// - Parameter addresses: pass a array of dictionary
     /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
@@ -266,6 +410,24 @@ public class FactomWalletdService {
                completion(response!, nil)
            }
        }
+    
+    /// Allows a user to add one or more identity keys to the wallet. Using the secret keys as input, the command will return the corresponding key pairs that were imported.
+    /// - Parameter addresses: pass a array of dictionary
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func importIdentityKeys(keys:[[String:String]], completion:@escaping APICompletionHandler) {
+        
+        self.params["method"] = "import-identity-keys"
+     self.params["params"] = ["keys":addresses]
+        
+        ApiManager.shared.httpRequest(urlString: factomWalletdUrl, params: params) { (response, error) in
+            guard error == nil else {
+                completion(nil, error!)
+                return
+            }
+            completion(response!, nil)
+        }
+    }
+    
     
     /// ‌Import a Koinify crowd sale address into the wallet.
     /// - Parameter words: pass a string of many different words
@@ -291,7 +453,7 @@ public class FactomWalletdService {
     /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
     public func newTransaction(txName:String, completion:@escaping APICompletionHandler) {
         
-        self.params["method"] = "import-addresses"
+        self.params["method"] = "new-transaction"
         self.params["params"] = ["tx-name":txName]
         
         ApiManager.shared.httpRequest(urlString: factomWalletdUrl, params: params) { (response, error) in
@@ -319,10 +481,62 @@ public class FactomWalletdService {
         }
     }
     
+    /// Be careful using this function! Ensure that you have backups of important keys before removing them. Given a factoid or entry-credit address, this command deletes the corresponding key pair from the wallet. Once executed, the user will no longer be able to retrieve the private key or make transactions with the address from this wallet.
+    /// - Parameter address: pass an address
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func removeAddress(address:String, completion:@escaping APICompletionHandler) {
+        
+        self.params["method"] = "remove-address"
+        self.params["params"] = ["address":address]
+        
+        ApiManager.shared.httpRequest(urlString: factomWalletdUrl, params: params) { (response, error) in
+            guard error == nil else {
+                completion(nil, error!)
+                return
+            }
+            completion(response!, nil)
+        }
+    }
+    
+    /// Be careful using this function! Ensure that you have backups of important keys before removing them. Given an identity public key, this command deletes the corresponding identity key pair from the wallet. Once executed, the user will no longer be able to retrieve that key pair or sign attributes/endorsements with the key pair from this wallet.
+    /// - Parameter address: pass a public key
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func removeIdentityKey(publicKey:String, completion:@escaping APICompletionHandler) {
+        
+        self.params["method"] = "remove-identity-key"
+        self.params["params"] = ["public":publicKey]
+        
+        ApiManager.shared.httpRequest(urlString: factomWalletdUrl, params: params) { (response, error) in
+            guard error == nil else {
+                completion(nil, error!)
+                return
+            }
+            completion(response!, nil)
+        }
+    }
+    
+    ///Sign arbitrary data using a secret key stored in the wallet using ed25519 signatures. signer can be a human readable Factoid Address (FA), Entry Credit Address (EC), or Identity Key (idpub). data is a base64-encoded string
+    /// - Parameter signer: pass signer as string
+    /// - Parameter data: pass a base64-encoded strings
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func signData(signer:String, data:String,completion:@escaping APICompletionHandler) {
+        
+        self.params["method"] = "sign-data"
+        self.params["params"] = ["signer":signer, "data":data]
+        
+        ApiManager.shared.httpRequest(urlString: factomWalletdUrl, params: params) { (response, error) in
+            guard error == nil else {
+                completion(nil, error!)
+                return
+            }
+            completion(response!, nil)
+        }
+    }
+    
     /// Signs the transaction. It is now ready to be executed.‌
     /// - Parameter txName: pass a transaction name of type string
     /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
-    public func signTransactionService(txName:String, completion:@escaping APICompletionHandler) {
+    public func signTransaction(txName:String, completion:@escaping APICompletionHandler) {
         
         self.params["method"] = "sign-transaction"
      self.params["params"] = ["tx-name":txName]
@@ -342,7 +556,7 @@ public class FactomWalletdService {
     /// - Parameter txName: pass a transaction name of type string
     /// - Parameter address: pass a string
     /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
-    public func subFeeService(txName:String, address:String, completion:@escaping APICompletionHandler) {
+    public func subFee(txName:String, address:String, completion:@escaping APICompletionHandler) {
         
         self.params["method"] = "sub-fee"
         self.params["params"] = ["tx-name":txName,"address":address]
@@ -436,6 +650,23 @@ public class FactomWalletdService {
         
         self.params["method"] = "transactions"
         
+        ApiManager.shared.httpRequest(urlString: factomWalletdUrl, params: params) { (response, error) in
+            guard error == nil else {
+                completion(nil, error!)
+                return
+            }
+            completion(response!, nil)
+        }
+    }
+    
+    /// Unlocks this wallet for the amount of time specified in seconds by timeout. The
+    /// - Parameter passPhrase: pass a phrase as string
+    /// - Parameter timeout: timeout as Int in seconds
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func unlockWallet(passPhrase:String, timeout:Int, completion:@escaping APICompletionHandler) {
+        
+        self.params["method"] = "unlock-wallet"
+        self.params["params"] = ["passphrase":passPhrase, "timeout":timeout]
         ApiManager.shared.httpRequest(urlString: factomWalletdUrl, params: params) { (response, error) in
             guard error == nil else {
                 completion(nil, error!)

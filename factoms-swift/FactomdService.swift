@@ -72,6 +72,21 @@ public class FactomdService {
         }
     }
     
+    /// Retrieve information about the directory block anchors that have been confirmed on Bitcoin and Ethereum.
+    /// - Parameter hash: pass hash of type string
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func anchors(hash:String,completion:@escaping APICompletionHandler) {
+        self.params["method"] = "anchors"
+        self.params["params"] = ["hash":hash]
+        ApiManager.shared.httpRequest(urlString: factomdUrl, params: params) { (response, error) in
+            guard error == nil else {
+                completion(nil, error!)
+                return
+            }
+            completion(response!, nil)
+        }
+    }
+    
     
     /// Return the keymr of the head of the chain for a chain ID (the unique hash created when the chain was created).
     /// - Parameter chainId: pass chainId as a String
@@ -160,6 +175,19 @@ public class FactomdService {
     public func dBlockByHeight(height:Int64 ,completion:@escaping APICompletionHandler) {
         self.params["method"] = "dblock-by-height"
         self.params["params"] = ["height":height]
+        ApiManager.shared.httpRequest(urlString: factomdUrl, params: params) { (response, error) in
+            guard error == nil else {
+                completion(nil, error!)
+                return
+            }
+            completion(response!, nil)
+        }
+    }
+    
+    /// Retrieve basic system information along with a description of the node’s current perception of the network.
+    /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
+    public func diagnostics(completion:@escaping APICompletionHandler) {
+        self.params["method"] = "diagnostics"
         ApiManager.shared.httpRequest(urlString: factomdUrl, params: params) { (response, error) in
             guard error == nil else {
                 completion(nil, error!)
