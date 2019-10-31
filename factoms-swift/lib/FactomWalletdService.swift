@@ -2,7 +2,7 @@
 //  FactomWalletdService.swift
 //  Factom-swift
 //
-//  Created by Atul Tiwari on 17/10/19.
+//  Created by Aman Joshi on 17/10/19.
 //  Copyright © 2019 Atul Tiwari. All rights reserved.
 //
 
@@ -14,11 +14,12 @@ import Foundation
 public class FactomWalletdService {
     
     public var params = ["jsonrpc": "2.0", "id": 0] as [String : Any]
-    private let factomWalletdUrl = "https://dev.factomd.net/v2"
+    //https://dev.factomd.net/v2
+    private var factomWalletdUrl = "http://localhost:8000";
     
     /// initializer
-    public init() {
-        
+    public init(config:Config) {
+        self.factomWalletdUrl = config.host+":\(config.walletdPort)"
     }
     
     /// This method will return an identity’s set of public keys (in order of decreasing priority) that were active at a specific block, or at the most recent height if the "height" parameter is not included.
@@ -236,7 +237,7 @@ public class FactomWalletdService {
     /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
     public func composeIdentityAttributeEndorsement(destinationChainId:String, entryHash:String, signerKey:String, signerChainId:String, ecpub:String, force:Bool, completion:@escaping APICompletionHandler) {
         self.params["method"] = "compose-identity-attribute-endorsement"
-        self.params["params"] = ["destination-chainid":destinationChainId, "entry-hash":attributes, "signerkey":signerKey, "signer-chainid":signerChainId, "ecpub":ecpub, "force":force]
+        self.params["params"] = ["destination-chainid":destinationChainId, "entry-hash":entryHash, "signerkey":signerKey, "signer-chainid":signerChainId, "ecpub":ecpub, "force":force]
         
         ApiManager.shared.httpRequest(urlString: factomWalletdUrl, params: params) { (response, error) in
             guard error == nil else {
@@ -417,7 +418,7 @@ public class FactomWalletdService {
     public func importIdentityKeys(keys:[[String:String]], completion:@escaping APICompletionHandler) {
         
         self.params["method"] = "import-identity-keys"
-     self.params["params"] = ["keys":addresses]
+     self.params["params"] = ["keys":keys]
         
         ApiManager.shared.httpRequest(urlString: factomWalletdUrl, params: params) { (response, error) in
             guard error == nil else {

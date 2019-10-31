@@ -2,23 +2,22 @@
 //  DebugService.swift
 //  factoms-swift
 //
-//  Created by Atul Tiwari on 18/10/19.
+//  Created by Aman Joshi on 18/10/19.
 //  Copyright © 2019 Atul Tiwari. All rights reserved.
 //
 
 import Foundation
-
 /// These API calls are primarily for debugging purposes.
 ///
 /// Import factoms-api and alamofire before using this class other wise it wont work
 public class DebugService {
     
-    private let debugServiceUrl = "https://dev.factomd.net/v2";
+    private var debugServiceUrl = "http://localhost:8000";
     public var params = ["jsonrpc": "2.0", "id": 0] as [String : Any]
-    public init() {
-        
-    }
     
+    public init(config:Config) {
+        self.debugServiceUrl = config.host+":\(config.port)"
+    }
     
     /// Shows current holding messages in the queue.‌
     /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
@@ -102,7 +101,7 @@ public class DebugService {
     
     /// Get the current configuration state from factomd.‌
     /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
-    public func configurationService(completion:@escaping APICompletionHandler) {
+    public func configuration(completion:@escaping APICompletionHandler) {
         
         self.params["method"] = "configuration"
         
@@ -134,9 +133,9 @@ public class DebugService {
     
     /// List of authority servers in the management chain.
     /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
-    public func authorites(completion:@escaping APICompletionHandler) {
+    public func authorities(completion:@escaping APICompletionHandler) {
         
-        self.params["method"] = "authorites"
+        self.params["method"] = "authorities"
         
         ApiManager.shared.httpRequest(urlString: debugServiceUrl, params: params) { (response, error) in
             guard error == nil else {

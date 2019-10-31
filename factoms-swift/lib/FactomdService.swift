@@ -2,7 +2,7 @@
 //  FactomdService.swift
 //  Factom-swift
 //
-//  Created by Atul Tiwari on 17/10/19.
+//  Created by Aman Joshi on 17/10/19.
 //  Copyright © 2019 Atul Tiwari. All rights reserved.
 //
 
@@ -14,12 +14,12 @@ import Foundation
 public class FactomdService {
     
     public var params = ["jsonrpc": "2.0", "id": 0] as [String : Any]
-    private let factomdUrl = "https://dev.factomd.net/v2";
+    private var factomdUrl = "http://localhost:8000";
     
     
     /// initialize
-    public init() {
-        
+    public init(config:Config) {
+        self.factomdUrl = config.host+":\(config.port)"
     }
     
     
@@ -316,7 +316,7 @@ public class FactomdService {
     /// Retrieve a specified entrycredit block given its merkle root key. The numbers are minute markers.
     /// - Parameter keymr: pass a keymr of type string
     /// - Parameter completion: give response of type jsonObject  if successful and error if request falis
-    public func ebtryCreditBlock(keymr:String ,completion:@escaping APICompletionHandler) {
+    public func entryCreditBlock(keymr:String ,completion:@escaping APICompletionHandler) {
         self.params["method"] = "entrycredit-block"
         self.params["params"] = ["keymr":keymr]
        ApiManager.shared.httpRequest(urlString: factomdUrl, params: params) { (response, error) in

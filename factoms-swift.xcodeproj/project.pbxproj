@@ -14,6 +14,10 @@
 		B70DE2AB2359A0A50011FA42 /* FactomWalletdService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70DE2AA2359A0A50011FA42 /* FactomWalletdService.swift */; };
 		B70DE2AD2359A3070011FA42 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70DE2AC2359A3070011FA42 /* Alamofire.framework */; };
 		B70DE2C12359A7340011FA42 /* DebugService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70DE2C02359A7340011FA42 /* DebugService.swift */; };
+		B72FE186236AADA3003D5B34 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72FE185236AADA3003D5B34 /* Config.swift */; };
+		B7E084D6236ACC1000FE6093 /* FactomdTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E084D5236ACC1000FE6093 /* FactomdTest.swift */; };
+		B7E084D8236AE6C900FE6093 /* DebugTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E084D7236AE6C900FE6093 /* DebugTest.swift */; };
+		B7E084DA236AE9ED00FE6093 /* FactomWalletdTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E084D9236AE9ED00FE6093 /* FactomWalletdTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +45,10 @@
 		B70DE2AA2359A0A50011FA42 /* FactomWalletdService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactomWalletdService.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B70DE2AC2359A3070011FA42 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B70DE2C02359A7340011FA42 /* DebugService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugService.swift; sourceTree = "<group>"; };
+		B72FE185236AADA3003D5B34 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		B7E084D5236ACC1000FE6093 /* FactomdTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactomdTest.swift; sourceTree = "<group>"; };
+		B7E084D7236AE6C900FE6093 /* DebugTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugTest.swift; sourceTree = "<group>"; };
+		B7E084D9236AE9ED00FE6093 /* FactomWalletdTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactomWalletdTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,14 +85,34 @@
 		B70DE29D2359A05D0011FA42 /* factoms-swift */ = {
 			isa = PBXGroup;
 			children = (
-				B70DE2A62359A0880011FA42 /* ApiManager.swift */,
-				B70DE2AA2359A0A50011FA42 /* FactomWalletdService.swift */,
-				B70DE2A82359A09C0011FA42 /* FactomdService.swift */,
-				B70DE2C02359A7340011FA42 /* DebugService.swift */,
+				B72FE187236AAFAC003D5B34 /* lib */,
+				B72FE188236AAFB5003D5B34 /* tests */,
+				B72FE185236AADA3003D5B34 /* Config.swift */,
 				B70DE29E2359A05D0011FA42 /* factoms_swift.h */,
 				B70DE29F2359A05D0011FA42 /* Info.plist */,
 			);
 			path = "factoms-swift";
+			sourceTree = "<group>";
+		};
+		B72FE187236AAFAC003D5B34 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				B70DE2C02359A7340011FA42 /* DebugService.swift */,
+				B70DE2A82359A09C0011FA42 /* FactomdService.swift */,
+				B70DE2AA2359A0A50011FA42 /* FactomWalletdService.swift */,
+				B70DE2A62359A0880011FA42 /* ApiManager.swift */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		B72FE188236AAFB5003D5B34 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				B7E084D5236ACC1000FE6093 /* FactomdTest.swift */,
+				B7E084D7236AE6C900FE6093 /* DebugTest.swift */,
+				B7E084D9236AE9ED00FE6093 /* FactomWalletdTest.swift */,
+			);
+			path = tests;
 			sourceTree = "<group>";
 		};
 		D8218FFFAF090A2AD34E6F07 /* Pods */ = {
@@ -213,7 +241,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B70DE2A92359A09C0011FA42 /* FactomdService.swift in Sources */,
+				B7E084DA236AE9ED00FE6093 /* FactomWalletdTest.swift in Sources */,
+				B7E084D8236AE6C900FE6093 /* DebugTest.swift in Sources */,
+				B7E084D6236ACC1000FE6093 /* FactomdTest.swift in Sources */,
 				B70DE2C12359A7340011FA42 /* DebugService.swift in Sources */,
+				B72FE186236AADA3003D5B34 /* Config.swift in Sources */,
 				B70DE2AB2359A0A50011FA42 /* FactomWalletdService.swift in Sources */,
 				B70DE2A72359A0880011FA42 /* ApiManager.swift in Sources */,
 			);
