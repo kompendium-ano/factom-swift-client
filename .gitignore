@@ -1,2 +1,6 @@
-#Don't track content of these folders
-pods/
+<<<<<<< HEAD
+Pods/
+build/
+=======
+/Pods
+>>>>>>> 679c58f... Update .gitignore
