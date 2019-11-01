@@ -2,8 +2,8 @@
 //  DebugTest.swift
 //  factoms-swift
 //
-//  Created by Aman Joshi on 31/10/19.
-//  Copyright © 2019 Atul Tiwari. All rights reserved.
+//  Created by Sergey Bushnyak on 31/10/19.
+//  Copyright © 2019  Kompendium, LLC. All rights reserved.
 //
 
 import UIKit

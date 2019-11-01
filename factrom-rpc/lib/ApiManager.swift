@@ -2,8 +2,8 @@
 //  ApiManager.swift
 //  factom-swift
 //
-//  Created by Aman Joshi on 15/10/19.
-//  Copyright © 2019  Aman Joshi . All rights reserved.
+//  Created by Sergey Bushnyak on 15/10/19.
+//  Copyright © 2019  Kompendium, LLC . All rights reserved.
 //
 
 import Foundation

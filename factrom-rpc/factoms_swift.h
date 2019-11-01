@@ -2,8 +2,8 @@
 //  factoms_swift.h
 //  factoms-swift
 //
-//  Created by Aman Joshi on 18/10/19.
-//  Copyright © 2019 Atul Tiwari. All rights reserved.
+//  Created by Sergey Bushnyak on 18/10/19.
+//  Copyright © 2019  Kompendium, LLC. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
