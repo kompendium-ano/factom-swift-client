@@ -1,13 +1,15 @@
-# factom-swift
+# Factom Swift Client
+
+JSON RPC client for Factom blockchain implemented in Swift
 
 # Implementation
     clone this repo on your project root path
-    git clone https://gitlab.com/kompendium/factom-swift.git
+    git clone https://github.com/kompendium-llc/factom-swift-client.git
 
 # Config
     You can change default node url or ports
     import factoms_swift
-    let config = Config.init(host: "http://abc.com", port: "8000", walletdPort: "8009")
+    let config = Config.init(host: "http://factomd.net", port: "8000", walletdPort: "8009")
 
 # Usage
 # Retreiving a balance
