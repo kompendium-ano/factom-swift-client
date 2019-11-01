@@ -41,36 +41,49 @@ class DebugTest: UIViewController {
         
         
         //holdingQueue
-        self.debug.holdingQueue { (result, error) in
-            if result != nil {
-                print(result!)
+        self.debug.holdingQueue { (response, error) in
+            if response != nil {
+                if let result = response!["result"] as? JSONObject {
+                    let messages = result["Messages"]
+                    print(messages!)
+                }
+                
             }else{
                 print(error!.localizedDescription)
             }
         }
         
         //networkingInfo
-        self.debug.networkingInfo { (result, error) in
-            if result != nil {
-                print(result!)
+        self.debug.networkingInfo { (response, error) in
+            if response != nil {
+                if let result = response!["result"] as? JSONObject {
+                    let networkNumber = result["NetworkNumber"]
+                    print(networkNumber!)
+                }
             }else{
                 print(error!.localizedDescription)
             }
         }
         
         //predictiveFer
-        self.debug.predictiveFer { (result, error) in
-            if result != nil {
-                print(result!)
+        self.debug.predictiveFer { (response, error) in
+            if response != nil {
+                if let result = response!["result"] as? JSONObject {
+                    let predictiveFER = result["PredictiveFER"]
+                    print(predictiveFER!)
+                }
             }else{
                 print(error!.localizedDescription)
             }
         }
         
         //auditServers
-        self.debug.auditServers { (result, error) in
-            if result != nil {
-                print(result!)
+        self.debug.auditServers { (response, error) in
+            if response != nil {
+                if let result = response!["result"] as? JSONObject {
+                    let AuditServers = result["AuditServers"]
+                    print(AuditServers!)
+                }
             }else{
                 print(error!.localizedDescription)
             }
@@ -78,18 +91,28 @@ class DebugTest: UIViewController {
         
         
         //federatedServers
-        self.debug.federatedServers { (result, error) in
-            if result != nil {
-                print(result!)
+        self.debug.federatedServers { (response, error) in
+            if response != nil {
+                if let result = response!["result"] as? JSONObject {
+                    if let FederatedServers = result["FederatedServers"] as? [[String:String]] {
+                        let chainId = FederatedServers[0]["ChainId"]
+                        print(chainId!)
+                    }
+                }
             }else{
                 print(error!.localizedDescription)
             }
         }
         
         //configuration
-        self.debug.configuration { (result, error) in
-            if result != nil {
-                print(result!)
+        self.debug.configuration { (response, error) in
+            if response != nil {
+                if let result = response!["result"] as? JSONObject {
+                    if let app = result["App"] as? JSONObject {
+                        let portNumber = app["PortNumber"]
+                        print(portNumber!)
+                    }
+                }
             }else{
                 print(error!.localizedDescription)
             }
@@ -97,9 +120,9 @@ class DebugTest: UIViewController {
         
         
         //processList
-        self.debug.processList { (result, error) in
-            if result != nil {
-                print(result!)
+        self.debug.processList { (response, error) in
+            if response != nil {
+                print(response!)
             }else{
                 print(error!.localizedDescription)
             }
@@ -107,9 +130,14 @@ class DebugTest: UIViewController {
         
         
         //authorities
-        self.debug.authorities { (result, error) in
-            if result != nil {
-                print(result!)
+        self.debug.authorities { (response, error) in
+            if response != nil {
+                if let result = response!["result"] as? JSONObject {
+                    if let Authorities = result["Authorities"] as? [[String:String]] {
+                        let AuthorityChainID = Authorities[0]["AuthorityChainID"]
+                        print(AuthorityChainID!)
+                    }
+                }
             }else{
                 print(error!.localizedDescription)
             }
@@ -117,9 +145,14 @@ class DebugTest: UIViewController {
         
         
         //reloadConfiguration
-        self.debug.reloadConfiguration { (result, error) in
-            if result != nil {
-                print(result!)
+        self.debug.reloadConfiguration { (response, error) in
+            if response != nil {
+                if let result = response!["result"] as? JSONObject {
+                    if let app = result["App"] as? JSONObject {
+                        let portNumber = app["PortNumber"]
+                        print(portNumber!)
+                    }
+                }
             }else{
                 print(error!.localizedDescription)
             }
@@ -127,28 +160,36 @@ class DebugTest: UIViewController {
         
         
         //dropRate
-        self.debug.dropRate { (result, error) in
-            if result != nil {
-                print(result!)
+        self.debug.dropRate { (response, error) in
+            if response != nil {
+                if let result = response!["result"] as? JSONObject {
+                    let DropRate = result["DropRate"]
+                    print(DropRate!)
+                }
             }else{
                 print(error!.localizedDescription)
             }
         }
         
         //setDropRate
-        self.debug.setDropRate { (result, error) in
-            if result != nil {
-                print(result!)
-            }else{
+        self.debug.setDropRate { (response, error) in
+            if response != nil {
+                if let result = response!["result"] as? JSONObject {
+                    let DropRate = result["DropRate"]
+                    print(DropRate!)
+                }            }else{
                 print(error!.localizedDescription)
             }
         }
         
         
         //delay
-        self.debug.delay { (result, error) in
-            if result != nil {
-                print(result!)
+        self.debug.delay { (response, error) in
+            if response != nil {
+                if let result = response!["result"] as? JSONObject {
+                    let Delay = result["Delay"]
+                    print(Delay!)
+                }
             }else{
                 print(error!.localizedDescription)
             }
@@ -156,32 +197,40 @@ class DebugTest: UIViewController {
         
         
         //setDelay
-        self.debug.setDelay { (result, error) in
-            if result != nil {
-                print(result!)
+        self.debug.setDelay { (response, error) in
+            if response != nil {
+                if let result = response!["result"] as? JSONObject {
+                    let Delay = result["Delay"]
+                    print(Delay!)
+                }
             }else{
                 print(error!.localizedDescription)
             }
         }
         
         //summary
-        self.debug.summary { (result, error) in
-            if result != nil {
-                print(result!)
+        self.debug.summary { (response, error) in
+            if response != nil {
+                if let result = response!["result"] as? JSONObject {
+                    let Summary = result["Summary"]
+                    print(Summary!)
+                }
             }else{
                 print(error!.localizedDescription)
             }
         }
         
         //messages
-        self.debug.messages { (result, error) in
-            if result != nil {
-                print(result!)
+        self.debug.messages { (response, error) in
+            if response != nil {
+                if let result = response!["result"] as? JSONObject {
+                    if let messages = result["Messages"] as? [String] {
+                        print(messages)
+                    }
+                }
             }else{
                 print(error!.localizedDescription)
             }
         }
-        
     }
-
 }
