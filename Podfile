@@ -7,5 +7,5 @@ target 'factoms-swift' do
 
   # Pods for factoms-swift
   pod 'Alamofire'
-
+  pod 'ObjectMapper', '~> 3.4'
 end

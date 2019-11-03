@@ -1,0 +1,6 @@
+framework module Pods_factoms_swift {
+  umbrella header "Pods-factoms-swift-umbrella.h"
+
+  export *
+  module * { export * }
+}
