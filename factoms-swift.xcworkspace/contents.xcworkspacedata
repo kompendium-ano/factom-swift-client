@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:factoms-swift.xcodeproj">
+      location = "group:/Users/sigrlami/work/projects-swift/factom-swift-client/factom-swift.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
