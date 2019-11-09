@@ -184,7 +184,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B70C259723758EB900BB0CFD /* Model */ = {
+		B70C259723758EB900BB0CFD /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				B795C973237A8DAF0065C05F /* GenResponse.swift */,
@@ -193,7 +193,7 @@
 				B70C259923758F6700BB0CFD /* FactomWalletd */,
 				B70C259823758F5C00BB0CFD /* Factomd */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		B70C259823758F5C00BB0CFD /* Factomd */ = {
@@ -296,7 +296,7 @@
 		B70DE29D2359A05D0011FA42 /* factom-swift */ = {
 			isa = PBXGroup;
 			children = (
-				B70C259723758EB900BB0CFD /* Model */,
+				B70C259723758EB900BB0CFD /* Models */,
 				B72FE187236AAFAC003D5B34 /* lib */,
 				B72FE188236AAFB5003D5B34 /* tests */,
 				B70DE29E2359A05D0011FA42 /* factoms_swift.h */,

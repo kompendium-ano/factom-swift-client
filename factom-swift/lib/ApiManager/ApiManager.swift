@@ -3,7 +3,7 @@
 //  factom-swift
 //
 //  Created by Sergey Bushnyak on 15/10/19.
-//  Copyright © 2019-2010 Kompendiu, LLC. All rights reserved.
+//  Copyright © 2019-2010 Kompendium, LLC. All rights reserved.
 //
 
 import Foundation
