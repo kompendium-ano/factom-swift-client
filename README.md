@@ -8,17 +8,22 @@ A JSON-RPC Swift client for the Factom protocol. Each response has unique type t
 
 ## Installation
 
-# Implementation
+## Implementation
     clone this repo on your project root path
-    git clone https://gitlab.com/kompendium/factom-swift.git
+    git clone https://github.com/kompendium-llc/factom-swift-clietn.git
 
-# Config
+## Config
     You can change default node url or ports
     import factoms_swift
     let config = Config.init(host: "http://abc.com", port: "8000", walletdPort: "8009")
 
-# Usage
-# Retreiving a balance
+## Usage
+
+We list several examples to provide better understanding on how to use library within your codebase.
+
+### Retreiving a balance
+
+```swift
     import factoms_swift
     self.factomd = FactomdService.init(config: config)
     
@@ -37,8 +42,11 @@ A JSON-RPC Swift client for the Factom protocol. Each response has unique type t
            print(error!.localizedDescription)
         }
     }
-    
-# Writing an Entry
+```    
+
+### Writing an Entry
+
+```swift
     import factoms_swift
     self.factomd = FactomdService.init(config: config)
     
@@ -70,8 +78,10 @@ A JSON-RPC Swift client for the Factom protocol. Each response has unique type t
                 print(error!.localizedDescription)
             }
         }
-    
-# Block Height and Current Minute
+```
+
+### Block Height and Current Minute
+```swift
     import factoms_swift
     self.factomd = FactomdService.init(config: config)
     
@@ -102,9 +112,11 @@ A JSON-RPC Swift client for the Factom protocol. Each response has unique type t
                 print(error!.localizedDescription)
             }
         }
+```
 
-# get transaction
+### Getting transaction
 
+```swift
     import factoms_swift
     self.factomd = FactomdService.init(config: config)
     
@@ -136,12 +148,14 @@ A JSON-RPC Swift client for the Factom protocol. Each response has unique type t
                 print(error!.localizedDescription)
             }
         }
+```
 
-# Testing
-    swift tests/FactomdTest.swift
-    swift tests/FactomWalletdTest.swift
-    swift tests/DebugTest.swift
-    
+## Testing
+```bash
+$ swift tests/FactomdTest.swift
+$ swift tests/FactomWalletdTest.swift
+$ swift tests/DebugTest.swift
+```
 [Factomd](factoms-swift/tests/FactomdTest.swift)
 
 [Factom Walletd](factoms-swift/tests/FactomWalletdTest.swift)
@@ -149,6 +163,17 @@ A JSON-RPC Swift client for the Factom protocol. Each response has unique type t
 [Debug](factoms-swift/tests/DebugTest.swift)
     
     
+## Contributions
+
+Please, feel free to contribute, fork the repo and submit PR.
+
+Say thanks, send a tip:
+
+- `btc`: 39oVXpsgsyW8ZgzsnX3sV7HLdtXWfT96qN
+- `fct`: FA38cwer93mmPw1HxjScLmK1yF9iJTu5P87T2vdkbuLovm2YXyss
+- `eth`: 0x9cDBA6bb44772259B3A3fb89cf233A147a720f34
+- `xlm`: GD2FROTYXYSNOQQREYXHCXVOYWV556EM6PAHMVUHJNJEUYTUXUSNUZQ3
+
     
     
     
