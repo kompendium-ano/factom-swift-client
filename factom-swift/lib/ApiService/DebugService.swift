@@ -1,6 +1,6 @@
 //
 //  DebugService.swift
-//  factoms-swift
+//  factom-swift
 //
 //  Created by Sergey Bushnyak on 18/10/19.
 //  Copyright © 2019-2020 Kompendium, LLC. All rights reserved.
@@ -9,7 +9,7 @@
 import Foundation
 /// These API calls are primarily for debugging purposes.
 ///
-/// Import factoms-api and alamofire before using this class other wise it wont work
+/// Import factom-api and alamofire before using this class other wise it wont work
 public class DebugService {
     
     private var debugServiceUrl = "http://localhost:8000";

@@ -1,6 +1,6 @@
 //
 //  DebugTest.swift
-//  factoms-swift
+//  factom-swift
 //
 //  Created by Sergey Bushnyak on 31/10/19.
 //  Copyright © 2019-2020 Kompendium, LLC. All rights reserved.
@@ -9,7 +9,7 @@
 import UIKit
 ///Always import the below frameworks to make use of the factom
 //import Alamofire
-//import factoms_swift
+//import factom_swift
 
 class DebugTest: UIViewController {
 

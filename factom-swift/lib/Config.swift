@@ -1,6 +1,6 @@
 //
 //  Config.swift
-//  factoms-swift
+//  factom-swift
 //
 //  Created by Sergey Bushnyak on 31/10/19.
 //  Copyright © 2019-2020 Kompendium, LLC. All rights reserved.

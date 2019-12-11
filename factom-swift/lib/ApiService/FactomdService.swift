@@ -10,7 +10,7 @@ import Foundation
 
 /// The API is designed for outside application to process transactions and interact with the Factom federated servers.
 ///
-/// Import factoms-api and alamofire before using this class other wise it wont work
+/// Import factom-api and alamofire before using this class other wise it wont work
 public class FactomdService {
     
     public var params = ["jsonrpc": "2.0", "id": 0] as [String : Any]

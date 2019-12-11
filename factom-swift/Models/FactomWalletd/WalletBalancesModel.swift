@@ -1,6 +1,6 @@
 //
 //  WalletBalancesModel.swift
-//  factoms-swift
+//  factom-swift
 //
 //  Created by Sergey Bushnyak on 02/12/19.
 //  Copyright © 2019-2020 Kompendium, LLC. All rights reserved.

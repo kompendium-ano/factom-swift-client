@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		779EC0E17A0D027D9723229E /* Pods_factoms_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50BA9B28040EA60AAE983149 /* Pods_factoms_swift.framework */; };
-		B70DE2A02359A05D0011FA42 /* factoms_swift.h in Headers */ = {isa = PBXBuildFile; fileRef = B70DE29E2359A05D0011FA42 /* factoms_swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95B2581AA8E772B65FE8E8E4 /* Pods_factom_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408CED818C48C35200F814B1 /* Pods_factom_swift.framework */; };
+		B70DE2A02359A05D0011FA42 /* factom_swift.h in Headers */ = {isa = PBXBuildFile; fileRef = B70DE29E2359A05D0011FA42 /* factom_swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B70DE2A72359A0880011FA42 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70DE2A62359A0880011FA42 /* ApiManager.swift */; };
 		B70DE2A92359A09C0011FA42 /* FactomdService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70DE2A82359A09C0011FA42 /* FactomdService.swift */; };
 		B70DE2AB2359A0A50011FA42 /* FactomWalletdService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70DE2AA2359A0A50011FA42 /* FactomWalletdService.swift */; };
@@ -94,11 +94,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		50BA9B28040EA60AAE983149 /* Pods_factoms_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_factoms_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		408CED818C48C35200F814B1 /* Pods_factom_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_factom_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		677D0E15B6F7E05701A69C03 /* Pods-factoms-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-factoms-swift.release.xcconfig"; path = "Target Support Files/Pods-factoms-swift/Pods-factoms-swift.release.xcconfig"; sourceTree = "<group>"; };
+		76D778CA8C46F0F034179DDD /* Pods-factom-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-factom-swift.debug.xcconfig"; path = "Target Support Files/Pods-factom-swift/Pods-factom-swift.debug.xcconfig"; sourceTree = "<group>"; };
 		853DA82B877AD6592192331D /* Pods-factoms-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-factoms-swift.debug.xcconfig"; path = "Target Support Files/Pods-factoms-swift/Pods-factoms-swift.debug.xcconfig"; sourceTree = "<group>"; };
+		9B1D162B1F074312E8F5F70D /* Pods-factom-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-factom-swift.release.xcconfig"; path = "Target Support Files/Pods-factom-swift/Pods-factom-swift.release.xcconfig"; sourceTree = "<group>"; };
 		B70DE29B2359A05D0011FA42 /* factom_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = factom_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B70DE29E2359A05D0011FA42 /* factoms_swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = factoms_swift.h; sourceTree = "<group>"; };
+		B70DE29E2359A05D0011FA42 /* factom_swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = factom_swift.h; sourceTree = "<group>"; };
 		B70DE29F2359A05D0011FA42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B70DE2A62359A0880011FA42 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		B70DE2A82359A09C0011FA42 /* FactomdService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactomdService.swift; sourceTree = "<group>"; };
@@ -176,8 +178,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				779EC0E17A0D027D9723229E /* Pods_factoms_swift.framework in Frameworks */,
 				B70DE2AD2359A3070011FA42 /* Alamofire.framework in Frameworks */,
+				95B2581AA8E772B65FE8E8E4 /* Pods_factom_swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +301,7 @@
 				B70C259723758EB900BB0CFD /* Models */,
 				B72FE187236AAFAC003D5B34 /* lib */,
 				B72FE188236AAFB5003D5B34 /* tests */,
-				B70DE29E2359A05D0011FA42 /* factoms_swift.h */,
+				B70DE29E2359A05D0011FA42 /* factom_swift.h */,
 				B70DE29F2359A05D0011FA42 /* Info.plist */,
 			);
 			path = "factom-swift";
@@ -348,6 +350,8 @@
 			children = (
 				853DA82B877AD6592192331D /* Pods-factoms-swift.debug.xcconfig */,
 				677D0E15B6F7E05701A69C03 /* Pods-factoms-swift.release.xcconfig */,
+				76D778CA8C46F0F034179DDD /* Pods-factom-swift.debug.xcconfig */,
+				9B1D162B1F074312E8F5F70D /* Pods-factom-swift.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -356,7 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				B70DE2AC2359A3070011FA42 /* Alamofire.framework */,
-				50BA9B28040EA60AAE983149 /* Pods_factoms_swift.framework */,
+				408CED818C48C35200F814B1 /* Pods_factom_swift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -368,7 +372,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B70DE2A02359A05D0011FA42 /* factoms_swift.h in Headers */,
+				B70DE2A02359A05D0011FA42 /* factom_swift.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,7 +459,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-factoms-swift-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-factom-swift-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -665,7 +669,7 @@
 		};
 		B70DE2A42359A05D0011FA42 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 853DA82B877AD6592192331D /* Pods-factoms-swift.debug.xcconfig */;
+			baseConfigurationReference = 76D778CA8C46F0F034179DDD /* Pods-factom-swift.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -674,7 +678,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "factoms-swift/Info.plist";
+				INFOPLIST_FILE = "factom-swift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -682,7 +686,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tect.test.factoms-swift";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tect.test.factom-swift";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -693,7 +697,7 @@
 		};
 		B70DE2A52359A05D0011FA42 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 677D0E15B6F7E05701A69C03 /* Pods-factoms-swift.release.xcconfig */;
+			baseConfigurationReference = 9B1D162B1F074312E8F5F70D /* Pods-factom-swift.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -702,7 +706,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "factoms-swift/Info.plist";
+				INFOPLIST_FILE = "factom-swift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -710,7 +714,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tect.test.factoms-swift";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tect.test.factom-swift";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
