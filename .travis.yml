@@ -2,4 +2,5 @@ language:
   - swift
 osx_image: xcode10.1
 script:
-  - xcodebuild -scheme factom-swift -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=12.1' build test
+  # - xcodebuild -scheme factom-swift -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=12.1' build test
+  - xcodebuild -version
