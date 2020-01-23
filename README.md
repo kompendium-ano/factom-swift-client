@@ -1,7 +1,6 @@
 # Swift JSON-RPC client for Factom API
 [![Build Status](https://travis-ci.com/kompendium-llc/factom-swift-client.svg?branch=master)](https://travis-ci.com/kompendium-llc/factom-swift-client)
 [![Coverage Status](https://camo.githubusercontent.com/9d862d136b5bbac1dd23fe8fa6f3d514cb17bd2a/68747470733a2f2f636f766572616c6c732e696f2f7265706f732f6769746875622f64617669642d6772732f636c616e675f7472617669735f636d616b655f67746573745f636f766572616c6c735f6578616d706c652f62616467652e7376673f6272616e63683d6d6173746572)](https://coveralls.io/github/kompendium-llc/factom-sift-client?branch=master)
-<!--- ![Cocoapods](https://img.shields.io/cocoapods/v/factom-swift-client) --->
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/kompendium-llc/factom-swift/blob/master/LICENSE)
 
 A JSON-RPC Swift client for the Factom protocol. Each response has unique type that automatically converted from JSON response and suitable for further usage in business logic. All responses are available in [Response](https://github.com/kompendium-llc/factom-swift-client/tree/master/factom-swift/Models) directory along with convinient converters.
