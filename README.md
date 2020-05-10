@@ -158,6 +158,9 @@ $ swift tests/DebugTest.swift
 
 [Debug](factoms-swift/tests/DebugTest.swift)
 
+## Learn
+- [Accessing the Factom blockchain from different programming languages](https://medium.com/kompendium-developments/accessing-factom-blockchain-from-different-programming-languages-7f09030efe16)
+- [Building simple blockchain game with Factom](https://medium.com/kompendium-developments/accessing-factom-blockchain-from-different-programming-languages-7f09030efe16)
 
 ## Contributions
 
